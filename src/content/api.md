@@ -1,4 +1,8 @@
 ## Api Endpoints
+Assignment details can be found at [http://www.karinsbeer.com/](http://www.karinsbeer.com/)
+
+### Host
+The host for Karin's Beer API requests is always `http://www.karinsbeer.com/`
 
 ### Authentication
 All endpoints require an `API_KEY` to access. Talk to Andrew to get this key. Once you have the key, you will need to include using `key` as a query parameter bypass the authentication.

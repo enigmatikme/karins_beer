@@ -4,6 +4,11 @@ Welcome! Thank you for taking the time to do this coding assessment. Please read
 
 Assessment starter can be found here: [Karin's Beer Assessment Github](https://github.com/alocke12992/karins_beer)
 
+## Get started
+[Fork the repo](https://github.com/alocke12992/karins_beer)
+Once you've cloned the repo locally, run `yarn` to install required packages.
+Run `yarn start` to launch the project on `http://localhost:3000`
+
 ## Assessment Guidelines:
 
 *   The purpose of this assessment is to help us evaluate your client side application development coding skills.

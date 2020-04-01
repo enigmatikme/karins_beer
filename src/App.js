@@ -9,6 +9,7 @@ import Flash from './components/Flash';
 import NoMatch from './pages/NoMatch';
 import Home from './pages/Home';
 import Beers from './pages/Beers';
+import Breweries from './pages/Breweries';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <Switch>
           {/* <Route exact path='/' component={Home} /> */}
           <Route path='/' component={Beers} />
+          <Route path='/brew' component={Breweries} />
           <Route component={NoMatch} />
         </Switch>
       </Segment>

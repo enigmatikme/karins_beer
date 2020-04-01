@@ -1,3 +1,3 @@
 <!-- PUT YOUR NOTES HERE -->
-- Start time:
+- Start time: 3:01pm
 - End time:

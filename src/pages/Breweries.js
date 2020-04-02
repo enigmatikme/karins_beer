@@ -7,6 +7,7 @@ const Breweries = () => {
   const [itemsPerPage, setItemsPerPage] = useState(0);
   const [totalItemsCount, setTotalItemsCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   const fetchBreweries = async () => {
     const fetchedBreweries = await axios.get('https://www.karinsbeer.com/api/all_breweries/?key=khsu0720')

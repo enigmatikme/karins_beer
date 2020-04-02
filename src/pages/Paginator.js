@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
 
-const Paginator = ({currentPage, postsPerPage, totalPosts, paginate, prevPage, nextPage}) => {
+const Paginator = ({postsPerPage, totalPosts, paginate, prevPage, nextPage}) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {

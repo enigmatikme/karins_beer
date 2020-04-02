@@ -5,13 +5,22 @@ import { render } from '@testing-library/react';
 import Beer from './Beer';
 import Paginator from './Paginator';
 import exampleData from './example-data'; 
-// import 'exmaple'
+import Search from '../components/Search';
+import BeerModal from './BeerModal';
+
+
 const Beers = () => {
   const [beers, setBeers] = useState([]);
   const [postsPerPage, setpostsPerPage] = useState(10);
-  const [totalItemsCount, setTotalItemsCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const [value, setValue] = useState('');
+  const [searchValue, setSearchValue] = useState('');
+
+
+  const handleSubmit = () => {
+    console.log("submitted")
+  }
 
   const [loading, setLoading] = useState(false);
 
@@ -31,8 +40,6 @@ const Beers = () => {
       // })
 
       setBeers(exampleData.entries);
-      
-    
   }
 
   useEffect(() => {
@@ -50,9 +57,11 @@ const Beers = () => {
  
     return (
       <div>
+        <Search handleSubmit={handleSubmit}/>
         { beers &&
           currentPosts.map((beer, i) => {
-            return <Beer key={i} beer={beer} />
+            // return <Beer key={i} beer={beer} />
+            return <BeerModal key={i} beer={beer} />
           })
         }
         <Paginator 

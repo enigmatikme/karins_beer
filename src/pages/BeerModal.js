@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import React from 'react'
+import { Header, Image, Modal } from 'semantic-ui-react';
+import Beer from './Beer';
 
 const serializer = () => {
 
 }
 const BeerModal = ({beer}) => (
-  <Modal trigger={<Button>Show Modal</Button>}>
+  <Modal trigger={<div>bleh</div>}>
     <Modal.Header>Select a Photo</Modal.Header>
     <Modal.Content image>
       {/* <Image wrapped size='medium' src={`${beer.labels.medium}`} /> */}

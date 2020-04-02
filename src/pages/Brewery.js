@@ -6,7 +6,7 @@ const Brewery = ({brewery}) => {
   return (
     <div>
       <h4>{brewery.name}</h4>
-      <BreweryModal brewery={brewery}/>
+      {/* <BreweryModal brewery={brewery}/> */}
     </div>
   )
 

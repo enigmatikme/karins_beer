@@ -1,8 +1,30 @@
 import React from 'react'
 import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import Brewery from './Brewery';
+import styled from 'styled-components';
 
-const BreweryModal = ({brewery}) => (
-  <Modal trigger={<Button>Show Modal</Button>}>
+const Clickable = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  & img {
+    height: 100px;
+    width: 100px;
+  }
+`;
+
+const BreweryModal = ({brewery}) => {
+  const imgsrc = brewery.labels ? (brewery.labels.medium ? brewery.labels.medium : '') : '';
+console.log(imgsrc);
+  return (
+  <Modal trigger={
+    <Clickable> 
+      <img class="fit-picture"
+        src="https://brewerydb-images.s3.amazonaws.com/beer/c4f2KE/upload_jjKJ7g-icon.png"
+        alt="Grapefruit slice atop a pile of other slices" />
+      <h4 className="click_beer">{brewery.name}</h4>
+    </Clickable>
+    }>
     <Modal.Header>Select a Photo</Modal.Header>
     <Modal.Content image>
       {/* <Image wrapped size='medium' src={`${beer.labels.medium}`} /> */}
@@ -14,17 +36,10 @@ const BreweryModal = ({brewery}) => (
         <div>{brewery.description}</div>
         {/* <div>Available: {brewery.available.name}</div> */}
         {/* <div>style descript: {brewery.style.description}</div> */}
-
-        
-        {/* <p>
-          We've found the following gravatar image associated with your e-mail
-          address.
-        </p>
-        <p>Is it okay to use this photo?</p> */}
       </Modal.Description>
     </Modal.Content>
   </Modal>
-  
-)
+  )
+      }
 
 export default BreweryModal;

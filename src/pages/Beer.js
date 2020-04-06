@@ -22,7 +22,7 @@ const Beer = ({beer}) => {
         </div>
 
       </Container>
-        <BeerModal beer={beer}/>
+        {/* <BeerModal beer={beer}/> */}
 
     </div>
   )

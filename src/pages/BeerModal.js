@@ -6,7 +6,8 @@ const serializer = () => {
 
 }
 const BeerModal = ({beer}) => (
-  <Modal trigger={<div>bleh</div>}>
+  //modal trigger unable to accept self closing component for some reason
+  <Modal trigger={<div><Beer beer={beer}/></div>}>
     <Modal.Header>Select a Photo</Modal.Header>
     <Modal.Content image>
       {/* <Image wrapped size='medium' src={`${beer.labels.medium}`} /> */}

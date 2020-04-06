@@ -23,8 +23,18 @@ const Breweries = () => {
   const [searchValue, setSearchValue] = useState('');
 
 
-  const handleSubmit = () => {
-    console.log("submitted")
+  const handleSubmit = (e, query) => {
+    e.preventDefault();
+    // const queried = await axios.get(`https://www.karinsbeer.com/api/search_breweries?query=${query}/?key=khsu0720`)
+    //   .then(success => {
+    //     let res = success.data;
+    //     setBreweries(res.entries)
+    //     setTotalItemsCount(res.total_entries);
+    //     setItemsPerPage(res.per_page);
+    //   })
+    //   .catch(error => {
+    //     console.log("error", error);
+    //   })
   }
 
 

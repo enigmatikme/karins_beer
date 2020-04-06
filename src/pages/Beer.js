@@ -4,6 +4,8 @@ import BeerModal from './BeerModal';
 
 const Container = styled.div`
   border: 2px solid black;
+  width: 250px;
+  height: 100px;
 `;
 
 const Beer = ({beer}) => {
@@ -20,10 +22,7 @@ const Beer = ({beer}) => {
             <span>{beer.abv}</span>
           </div>
         </div>
-
       </Container>
-        {/* <BeerModal beer={beer}/> */}
-
     </div>
   )
 }

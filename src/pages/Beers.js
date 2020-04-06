@@ -18,19 +18,19 @@ const Beers = () => {
   const [searchValue, setSearchValue] = useState('');
 
 
-  const handleSubmit = async (e, query) => {
-    e.preventDefault();
-    // const queried = await axios.get(`https://www.karinsbeer.com/api//api/search_beers?query=${query}/?key=khsu0720`)
-    //   .then(success => {
-    //     let res = success.data;
-    //     setBeers(res.entries);
-    //     // setTotalItemsCount(res.total_entries);
-    //     setpostsPerPage(res.per_page);
-    //     console.log("SUCCESS", success)
-    //   })
-    //   .catch(error => {
-    //     console.log("Error", error);
-    //   })
+  const handleSubmit = (query) => {
+    console.log("stubmitted")
+      axios.get(`https://www.karinsbeer.com/api/search_beers?query=${query}/?key=khsu0720`)
+      .then(success => {
+        let res = success.data;
+        setBeers(res.entries);
+        // setTotalItemsCount(res.total_entries);
+        setpostsPerPage(res.per_page);
+        console.log("SUCCESS", success)
+      })
+      .catch(error => {
+        console.log("Error", error);
+      })
   }
 
   const [loading, setLoading] = useState(false);
@@ -73,6 +73,7 @@ const Beers = () => {
           currentPosts.map((beer, i) => {
             // return <Beer key={i} beer={beer} />
             // console.log('beer', beer)
+            console.log(beer.labels)
             return <BeerModal key={i} beer={beer} />
           })
         }
